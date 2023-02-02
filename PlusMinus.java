@@ -17,5 +17,5 @@ class Result {
       System.out.printf("%f%n", (pc / length), 6);
       System.out.printf("%f%n", (nc / length), 6);
       System.out.printf("%f%n", (zc / length), 6);
-      }
+   }
 }
