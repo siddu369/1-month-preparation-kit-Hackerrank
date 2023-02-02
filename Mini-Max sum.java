@@ -1,6 +1,7 @@
 class Result {
   public static void miniMaxSum(List<Integer> arr) {
-    arr = arr.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+    //arr = arr.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+    Collections.sort(arr);
     long sum = 0;
     for (int i = 0; i < arr.size(); i++){
         sum += arr.get(i);
