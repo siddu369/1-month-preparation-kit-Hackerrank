@@ -1,3 +1,7 @@
+/*
+had to use java 8 for the template as mentioned in the question, debug the findZigZagSequence function.
+*/
+
 public class Main {
     
     public static void main (String[] args) throws java.lang.Exception {
@@ -15,19 +19,19 @@ public class Main {
    
     public static void findZigZagSequence(int [] a, int n){
         Arrays.sort(a);
-        int mid = n / 2;
+        int mid = n / 2; // change 1, previously int mid = (n + 1) / 2;
         int temp = a[mid];
         a[mid] = a[n - 1];
         a[n - 1] = temp;
     
         int st = mid + 1;
-        int ed = n - 2;
+        int ed = n - 2; // change 2, previously int ed = n - 1;
         while(st <= ed){
             temp = a[st];
             a[st] = a[ed];
             a[ed] = temp;
             st = st + 1;
-            ed = ed - 1;
+            ed = ed - 1; // change 3, previously ed = ed + 1;
         }
         for(int i = 0; i < n; i++){
             if(i > 0) System.out.print(" ");
