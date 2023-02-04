@@ -1,9 +1,9 @@
 class Result {
   public static int superDigit(String n, int k) {
-        long superDigit = k * Stream.of(n.split("")).mapToLong(Long::parseLong).sum();
-        if (superDigit > 10){
-           superDigit = superDigit(String.valueOf(superDigit), 1);
+        long res = k * Stream.of(n.split("")).mapToLong(Long::parseLong).sum();
+        if (res > 10){
+           res = superDigit(String.valueOf(res), 1);
         }
-        return (int) superDigit;
+        return (int) res;
     }
 }
